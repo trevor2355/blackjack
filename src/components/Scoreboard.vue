@@ -29,7 +29,6 @@ export default class Scoreboard extends Vue {
 <style scoped>
 @media screen and (max-width: 599px) {
   .score-container {
-    background-color: rgb(235, 235, 235);
     position: relative;
   }
 
