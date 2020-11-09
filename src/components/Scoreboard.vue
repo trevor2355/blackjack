@@ -27,25 +27,45 @@ export default class Scoreboard extends Vue {
 }
 </script>
 <style scoped>
-.score-container {
-  position: absolute;
-  top: 8%;
-  right: 8%;
+@media screen and (max-width: 599px) {
+  .score-container {
+    background-color: rgb(235, 235, 235);
+    position: relative;
+  }
+
+  .scoreboard {
+    padding: 12px;
+  }
 }
+
+@media screen and (min-width: 600px) {
+  .score-container {
+    position: absolute;
+    top: 8%;
+    right: 8%;
+  }
+
+  .scoreboard {
+    padding: 16px;
+  }
+}
+
 .scoreboard {
   border: 2px solid black;
-  padding: 16px;
 }
+
 .person-score {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
 }
+
 .score-message {
   margin: 16px;
   color: rgb(216, 34, 34);
 }
+
 h3 {
   color: rgb(27, 27, 27);
   margin-top: 0px;

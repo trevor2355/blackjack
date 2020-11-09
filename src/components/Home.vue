@@ -126,7 +126,6 @@ export default class Home extends Vue {
 
   playerHold(playerIndex: number) {
     this.players[playerIndex].isHolding = true;
-    console.log("Are all players holding? ", this.allPlayersHolding);
     if (this.allPlayersHolding) {
       this.takeDealersTurn();
     }
@@ -151,7 +150,6 @@ export default class Home extends Vue {
   }
 
   dealerHold() {
-    console.log("dealer hold is being called");
     this.dealer.isHolding = true;
     this.calculateAllTotalScores();
   }
