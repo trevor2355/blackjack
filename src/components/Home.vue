@@ -32,11 +32,10 @@ import { Component, Vue } from "vue-property-decorator";
 import Scoreboard from "@/components/Scoreboard.vue";
 import Dealer from "@/components/Dealer.vue";
 import Player from "@/components/Player.vue";
-import IPlayer from "@/models/IPlayer";
+import PlayerInterface from "@/models/PlayerInterface";
 import Deck from "@/data/Deck";
 import {
   calculateGameScore,
-  had21OnDeal,
   calculateTotalScore
 } from "@/data/scoreCalculations";
 
@@ -48,14 +47,14 @@ import {
   }
 })
 export default class Home extends Vue {
-  dealer: IPlayer = {
+  dealer: PlayerInterface = {
     name: "Dealer",
     gameScore: 0,
     totalScore: 0,
     cards: [],
     isHolding: false
   };
-  players: IPlayer[] = [
+  players: PlayerInterface[] = [
     {
       name: "Player 1",
       gameScore: 0,

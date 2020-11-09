@@ -1,6 +1,6 @@
 import cardOptions from "@/models/cardOptions";
 
-export default interface IPlayer {
+export default interface PlayerInterface {
   name: string;
   gameScore: number;
   totalScore: number;

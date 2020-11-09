@@ -19,7 +19,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import Card from "@/components/Card.vue";
-import IPlayer from "@/models/IPlayer";
+import PlayerInterface from "@/models/PlayerInterface";
 
 @Component({
   components: {
@@ -27,7 +27,7 @@ import IPlayer from "@/models/IPlayer";
   }
 })
 export default class Dealer extends Vue {
-  @Prop() dealer!: IPlayer;
+  @Prop() dealer!: PlayerInterface;
 
   get shownScore(): string {
     if (!this.dealer.isHolding) {

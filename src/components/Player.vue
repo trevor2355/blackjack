@@ -30,7 +30,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import Card from "@/components/Card.vue";
-import IPlayer from "@/models/IPlayer";
+import PlayerInterface from "@/models/PlayerInterface";
 
 @Component({
   components: {
@@ -38,7 +38,7 @@ import IPlayer from "@/models/IPlayer";
   }
 })
 export default class Player extends Vue {
-  @Prop() player!: IPlayer;
+  @Prop() player!: PlayerInterface;
   @Prop() index!: number;
 
   hit() {

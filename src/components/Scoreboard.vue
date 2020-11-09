@@ -16,13 +16,13 @@
 </template>
 
 <script lang="ts">
-import IPlayer from "@/models/IPlayer";
+import PlayerInterface from "@/models/PlayerInterface";
 import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
 export default class Scoreboard extends Vue {
-  @Prop() dealer!: IPlayer;
-  @Prop() players!: IPlayer[];
+  @Prop() dealer!: PlayerInterface;
+  @Prop() players!: PlayerInterface[];
   @Prop() scoreMessage!: string;
 }
 </script>
